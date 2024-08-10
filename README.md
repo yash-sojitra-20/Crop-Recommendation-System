@@ -83,7 +83,7 @@ This branch features the frontend UI developed using React. It allows users to i
 
    Backend:
    ```bash
-   python app.py
+   python -m uvicorn main:app --reload
    ```
 
    Frontend:
