@@ -10,6 +10,7 @@ function Navbar() {
         <div className="space-x-4">
           <Link to="/" className="text-white text-lg hover:text-green-200">Home</Link>
           <Link to="/calculate" className="text-white text-lg hover:text-green-200">Suggest-crop</Link>
+          <Link to="/FarmerGuide" className="text-white text-lg hover:text-green-200">Guide</Link>
         </div>
       </div>
     </nav>

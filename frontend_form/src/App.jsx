@@ -3,7 +3,8 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
-import Calculate from './pages/calculate';
+import FarmerGuide from './pages/FarmerGuide';
+import CropPredictionForm from './components/CropInputFrom';
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/calculate" element={<Calculate />} />
+        <Route path="/calculate" element={<CropPredictionForm />} />
+        <Route path="/FarmerGuide" element={<FarmerGuide/>}/>
       </Routes>
     </div>
   );

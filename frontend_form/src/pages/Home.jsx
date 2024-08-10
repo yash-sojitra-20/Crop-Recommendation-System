@@ -4,7 +4,7 @@ function Home() {
   return (
     <div className="relative min-h-screen bg-gray-100">
       {/* Image Section */}
-      <div className="relative h-[80vh] overflow-hidden">
+      <div className="relative h-[60vh] overflow-hidden">
         <img
           src="https://canadianfoodfocus.org/wp-content/uploads/2022/10/crop-rotation.jpg"
           alt="Crop Rotation"
@@ -12,8 +12,10 @@ function Home() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
         <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white">
-          <h1 className="text-5xl font-bold mb-4">Welcome to Smart Crop Prediction</h1>
-          <p className="text-lg max-w-2xl">
+          <h1 className="text-5xl font-bold mb-4 transform transition-transform duration-300 hover:scale-110">
+            Welcome to Smart Crop Prediction
+          </h1>
+          <p className="text-lg max-w-2xl transform transition-transform duration-300 hover:scale-110">
             Discover the best crops to grow based on your soil conditions and environmental factors. 
             Input your data, and let our AI-powered tool guide your farming decisions for optimal yield.
           </p>
@@ -25,7 +27,7 @@ function Home() {
         <h2 className="text-3xl font-bold text-green-700 text-center mb-12">Why Use Our Tool?</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Feature 1 */}
-          <div className="bg-white shadow-lg rounded-lg p-8 text-center">
+          <div className="bg-white shadow-lg rounded-lg p-8 text-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl hover:bg-green-100">
             <h3 className="text-2xl font-semibold text-green-700 mb-4">Data-Driven Decisions</h3>
             <p className="text-gray-700">
               Our tool leverages advanced algorithms to analyze your soil data and environmental conditions, providing you with the most accurate crop recommendations.
@@ -33,7 +35,7 @@ function Home() {
           </div>
 
           {/* Feature 2 */}
-          <div className="bg-white shadow-lg rounded-lg p-8 text-center">
+          <div className="bg-white shadow-lg rounded-lg p-8 text-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl hover:bg-green-100">
             <h3 className="text-2xl font-semibold text-green-700 mb-4">Easy to Use</h3>
             <p className="text-gray-700">
               Input your data easily through our intuitive interface, and receive instant, actionable insights to help you plan your crop rotations and improve yield.
@@ -41,7 +43,7 @@ function Home() {
           </div>
 
           {/* Feature 3 */}
-          <div className="bg-white shadow-lg rounded-lg p-8 text-center">
+          <div className="bg-white shadow-lg rounded-lg p-8 text-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl hover:bg-green-100">
             <h3 className="text-2xl font-semibold text-green-700 mb-4">Sustainable Farming</h3>
             <p className="text-gray-700">
               Promote sustainable farming practices by optimizing your crop rotations and reducing environmental impact, all while maximizing your harvest.
@@ -49,7 +51,7 @@ function Home() {
           </div>
 
           {/* Feature 4 */}
-          <div className="bg-white shadow-lg rounded-lg p-8 text-center">
+          <div className="bg-white shadow-lg rounded-lg p-8 text-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl hover:bg-green-100">
             <h3 className="text-2xl font-semibold text-green-700 mb-4">Trusted by Farmers</h3>
             <p className="text-gray-700">
               Join a growing community of farmers who trust our tool to make informed decisions and achieve better farming outcomes year after year.
