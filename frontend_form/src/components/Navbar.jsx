@@ -8,7 +8,6 @@ function Navbar() {
         <Link to="/" className="text-white text-2xl font-bold">Crop Detection</Link>
         <div className="space-x-4">
           <Link to="/" className="text-white text-lg hover:text-green-200">Home</Link>
-          <Link to="/results" className="text-white text-lg hover:text-green-200">Results</Link>
         </div>
       </div>
     </nav>
