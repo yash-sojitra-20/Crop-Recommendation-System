@@ -176,6 +176,21 @@ function CropPredictionForm() {
           {/* <img src={imageUrl} alt="Predicted Crop" className="w-full h-64 object-cover rounded-lg shadow-md" /> */}
         </div>
       </div>
+
+      {/* Additional Information Section */}
+      <div className="bg-white rounded-lg p-8 mt-8 max-w-6xl w-full">
+        <h2 className="text-2xl font-bold text-gray-800 mb-6">Understanding the Constraints</h2>
+        <ul className="list-disc list-inside text-gray-700 space-y-4">
+          <li><strong>Nitrogen (N):</strong> Essential nutrient for plant growth, critical for the synthesis of proteins, enzymes, and chlorophyll.</li>
+          <li><strong>Phosphorus (P):</strong> Important for root development and flowering, aiding in the transfer of energy in plants.</li>
+          <li><strong>Potassium (K):</strong> Helps in photosynthesis, water regulation, and the formation of plant sugars and starches.</li>
+          <li><strong>Temperature:</strong> Affects seed germination, plant growth, and crop yield. Different crops have varying temperature requirements.</li>
+          <li><strong>Humidity:</strong> Influences the rate of evapotranspiration, pest incidence, and disease prevalence in crops.</li>
+          <li><strong>pH:</strong> Determines nutrient availability to plants. Most crops thrive in a pH range of 6 to 7.5.</li>
+          <li><strong>Rainfall:</strong> Provides the necessary water for crops. Different crops require varying amounts of rainfall for optimal growth.</li>
+          <li><strong>Tolerance (k):</strong> The tolerance level (k) defines the margin of error in prediction, allowing for variability in environmental conditions.</li>
+        </ul>
+      </div>
     </div>
   );
 }
