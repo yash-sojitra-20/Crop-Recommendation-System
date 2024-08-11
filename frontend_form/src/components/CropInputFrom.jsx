@@ -14,7 +14,12 @@ function CropPredictionForm() {
     rainfall: '',
     k: '10'
   });
-  const [predictions, setPredictions] = useState({ crop: '', rotation: '' });
+  const [predictions, setPredictions] = useState({
+    crop: '',
+    cropGuj: '',
+    rotatedCrop: '',
+    rotatedCropGuj: ''
+  });
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -26,7 +31,9 @@ function CropPredictionForm() {
       const response = await axios.post('http://127.0.0.1:8000/predict/', formData);
       setPredictions({
         crop: response.data.crop,
-        rotation: response.data.rotation
+        cropGuj: response.data.cropGuj,
+        rotatedCrop: response.data.rotatedCrop,
+        rotatedCropGuj: response.data.rotatedCropGuj
       });
     } catch (error) {
       console.error("There was an error!", error);
@@ -42,6 +49,7 @@ function CropPredictionForm() {
 
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* Form Inputs */}
               <div>
                 <label className="block text-gray-700 font-semibold mb-2">Nitrogen (N):</label>
                 <input
@@ -152,16 +160,20 @@ function CropPredictionForm() {
           {predictions.crop && (
             <div className="bg-green-100 p-6 rounded-lg shadow-md mb-6">
               <h3 className="text-xl font-semibold text-green-800">Recommended Crop:</h3>
-              <p className="mt-4 text-lg text-green-700">{predictions.crop}</p>
+              <p className="mt-4 text-lg text-green-700">
+                {predictions.crop} / {predictions.cropGuj}
+              </p>
             </div>
           )}
-          {predictions.rotation && (
+          {predictions.rotatedCrop && (
             <div className="bg-yellow-100 p-6 rounded-lg shadow-md mb-6">
               <h3 className="text-xl font-semibold text-yellow-800">Recommended Crop Rotation:</h3>
-              <p className="mt-4 text-lg text-yellow-700">{predictions.rotation}</p>
+              <p className="mt-4 text-lg text-yellow-700">
+                {predictions.rotatedCrop} / {predictions.rotatedCropGuj}
+              </p>
             </div>
           )}
-          <img src={imageUrl} alt="Predicted Crop" className="w-full h-64 object-cover rounded-lg shadow-md" />
+          {/* <img src={imageUrl} alt="Predicted Crop" className="w-full h-64 object-cover rounded-lg shadow-md" /> */}
         </div>
       </div>
     </div>
