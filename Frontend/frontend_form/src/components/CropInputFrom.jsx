@@ -57,7 +57,7 @@ function CropPredictionForm() {
                   name="N"
                   value={formData.N}
                   onChange={handleChange}
-                  placeholder="Enter Nitrogen level"
+                  placeholder="Enter Nitrogen level (ppm)"
                   className="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500"
                   required
                 />
@@ -69,7 +69,7 @@ function CropPredictionForm() {
                   name="P"
                   value={formData.P}
                   onChange={handleChange}
-                  placeholder="Enter Phosphorus level"
+                  placeholder="Enter Phosphorus level (ppm)"
                   className="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500"
                   required
                 />
@@ -81,7 +81,7 @@ function CropPredictionForm() {
                   name="K"
                   value={formData.K}
                   onChange={handleChange}
-                  placeholder="Enter Potassium level"
+                  placeholder="Enter Potassium level (ppm)"
                   className="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500"
                   required
                 />
@@ -93,7 +93,7 @@ function CropPredictionForm() {
                   name="temperature"
                   value={formData.temperature}
                   onChange={handleChange}
-                  placeholder="Enter Temperature"
+                  placeholder="Enter Temperature (°C)"
                   className="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500"
                   required
                 />
@@ -105,7 +105,7 @@ function CropPredictionForm() {
                   name="humidity"
                   value={formData.humidity}
                   onChange={handleChange}
-                  placeholder="Enter Humidity"
+                  placeholder="Enter Humidity (%)"
                   className="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500"
                   required
                 />
@@ -117,7 +117,7 @@ function CropPredictionForm() {
                   name="ph"
                   value={formData.ph}
                   onChange={handleChange}
-                  placeholder="Enter pH level"
+                  placeholder="Enter pH level ( 0 to 14))"
                   className="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500"
                   required
                 />
@@ -129,7 +129,7 @@ function CropPredictionForm() {
                   name="rainfall"
                   value={formData.rainfall}
                   onChange={handleChange}
-                  placeholder="Enter Rainfall"
+                  placeholder="Enter Rainfall ((mm) growing season)"
                   className="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500"
                   required
                 />
@@ -141,7 +141,7 @@ function CropPredictionForm() {
                   name="k"
                   value={formData.k}
                   onChange={handleChange}
-                  placeholder="Enter Tolerance level"
+                  placeholder="Enter Tolerance level (0 to 10)"
                   className="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500"
                   required
                 />
