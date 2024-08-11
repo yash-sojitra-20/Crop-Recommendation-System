@@ -17,7 +17,7 @@ function Navbar() {
         <Link to="/" className="text-white text-2xl font-bold">CropDetector</Link>
         <ul className="flex space-x-8">
           <li><Link to="/" className="text-2xl text-white transition duration-300 transform hover:scale-110 hover:underline">Home</Link></li>
-          <li><Link to="/calculate" className="text-2xl text-white transition duration-300 transform hover:scale-110 hover:underline">Calculate</Link></li>
+          <li><Link to="/calculate" className="text-2xl text-white transition duration-300 transform hover:scale-110 hover:underline">Suggest-Crop</Link></li>
           <li><Link to="/FarmerGuide" className="text-2xl text-white transition duration-300 transform hover:scale-110 hover:underline">Guide</Link></li>
         </ul>
       </div>
