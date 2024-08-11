@@ -178,7 +178,7 @@ function CropPredictionForm() {
       </div>
 
       {/* Additional Information Section */}
-      <div className="bg-white rounded-lg p-8 mt-8 max-w-6xl w-full">
+      <div className="bg-white rounded-lg text-center p-8 mt-8 max-w-6xl w-full">
         <h2 className="text-2xl font-bold text-gray-800 mb-6">Understanding the Constraints</h2>
         <ul className="list-disc list-inside text-gray-700 space-y-4">
           <li><strong>Nitrogen (N):</strong> Essential nutrient for plant growth, critical for the synthesis of proteins, enzymes, and chlorophyll.</li>
