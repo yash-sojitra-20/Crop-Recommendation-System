@@ -46,7 +46,7 @@ function CropPredictionForm() {
     console.log('Fetching the data');
     console.log('Before: ', predictions);
     
-    axios.post('/api/test_predict/', formData)
+    axios.post('/api/predict/', formData)
       .then((response) => {
         // Update the state with the response data
         setPredictions({

@@ -17,12 +17,16 @@ def rotate_crop_and_translate(crop):
     rotated_crop = response_rotated_crop.text.strip()
 
     # Translate the original crop and the rotated crop to Gujarati using the Gemini API
-    prompt_translate_crop = f"Translate '{crop}' into Gujarati."
+    prompt_translate_crop = f"Gujarati of '{crop}', give only one word."
     response_crop_guj = model.generate_content(prompt_translate_crop)
     crop_gujarati = response_crop_guj.text.strip()
 
-    prompt_translate_rotated_crop = f"Translate '{rotated_crop}' into Gujarati."
-    response_rotated_crop_guj = model.generate_content(prompt_translate_rotated_crop)
-    rotated_crop_gujarati = response_rotated_crop_guj.text.strip()
+    if(rotated_crop != 'Not available'):
+        prompt_translate_rotated_crop = f"Gujarati of '{rotated_crop}', give only one word."
+        response_rotated_crop_guj = model.generate_content(prompt_translate_rotated_crop)
+        rotated_crop_gujarati = response_rotated_crop_guj.text.strip()
+    else:
+        rotated_crop_gujarati=''
+        
 
     return crop, crop_gujarati, rotated_crop, rotated_crop_gujarati
