@@ -43,5 +43,19 @@ def predict_crop(data):
         if distance < min_distance:
             min_distance = distance
             best_match = row['label']
-
     return best_match
+
+# test_data = {
+#     'N': 93,  # Out of bounds to trigger the message
+#     'P': 53,
+#     'K': 40,
+#     'temperature': 20,
+#     'humidity': 82,
+#     'ph': 5,
+#     'rainfall': 240
+# }
+
+# result = predict_crop(test_data)
+# print(result)
+    
+    # return best_match

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const imageUrl = 'https://i0.wp.com/geopard.tech/wp-content/uploads/2022/06/63.2-min.jpg?resize=810%2C439&ssl=1';
-
+// CropData
+// formData
 function CropPredictionForm() {
   const [formData, setFormData] = useState({
     N: '',
@@ -11,8 +11,7 @@ function CropPredictionForm() {
     temperature: '',
     humidity: '',
     ph: '',
-    rainfall: '',
-    k: '10'
+    rainfall: ''
   });
   const [predictions, setPredictions] = useState({
     crop: '',
@@ -25,20 +24,43 @@ function CropPredictionForm() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   console.log('fatching the data')
+  //   console.log('befor : ' ,predictions)
+  //   try {
+  //     const response = await axios.post('/api/test_predict/', formData);
+  //     setPredictions({
+  //       crop: response.data.crop,
+  //       cropGuj: response.data.cropGujarati,
+  //       rotatedCrop: response.data.rotatedCrop,
+  //       rotatedCropGuj: response.data.rotatedCropGujarati
+  //     });
+  //     console.log('after : ' ,predictions)
+  //   } catch (error) {
+  //     console.error("There was an error!", error);
+  //   }
+  // };
+  const handleSubmit = (e) => {
     e.preventDefault();
-    try {
-      const response = await axios.post('http://127.0.0.1:8000/predict/', formData);
-      setPredictions({
-        crop: response.data.crop,
-        cropGuj: response.data.cropGuj,
-        rotatedCrop: response.data.rotatedCrop,
-        rotatedCropGuj: response.data.rotatedCropGuj
+    console.log('Fetching the data');
+    console.log('Before: ', predictions);
+    
+    axios.post('/api/test_predict/', formData)
+      .then((response) => {
+        // Update the state with the response data
+        setPredictions({
+          crop: response.data.crop,
+          cropGuj: response.data.cropGujarati,
+          rotatedCrop: response.data.rotatedCrop,
+          rotatedCropGuj: response.data.rotatedCropGujarati
+        });
+      })
+      .catch((error) => {
+        console.error("There was an error!", error);
       });
-    } catch (error) {
-      console.error("There was an error!", error);
-    }
   };
+  
 
   return (
     <div className="bg-gray-50 min-h-screen flex flex-col items-center py-12 px-4">
@@ -134,7 +156,7 @@ function CropPredictionForm() {
                   required
                 />
               </div>
-              <div>
+              {/* <div>
                 <label className="block text-gray-700 font-semibold mb-2">Tolerance (k):</label>
                 <input
                   type="number"
@@ -145,7 +167,7 @@ function CropPredictionForm() {
                   className="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500"
                   required
                 />
-              </div>
+              </div> */}
             </div>
             <div className="flex justify-center">
               <button type="submit" className="bg-green-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-green-700 transition duration-300 transform hover:scale-105">
