@@ -13,6 +13,25 @@ The objective of this project is to develop an AI-driven system that recommends 
 - Temperature
 - Humidity
 
+# Web View
+
+## Home Page
+<p align="center">
+  <img src="HomePage.png" width="350" title="Home Page">
+  <img src="HomePage_whyUseOurTool.png" width="350" title="Home Page_whyUseOurTool">
+</p>
+
+## calculate
+<p align="center">
+  <img src="CropPredictionForm.png" width="350" title="CropPrediction Form">
+  <img src="ConsstaintOvervie.png" width="350" title="Constraint Overview">
+</p>
+
+## Framer Guid
+<p align="center">
+  <img src="CropDiseasesGuid.png" width="350" title="CropDiseasesGuid">
+</p>
+
 ## Repository Structure
 
 This repository is organized into multiple branches to facilitate parallel development:
